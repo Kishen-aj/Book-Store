@@ -1,0 +1,153 @@
+﻿@*@{
+        ViewBag.Title = "Home Page";
+    }
+
+    <html style="background-image: url('../../Content/pexels-pixabay-326333.jpg');">
+    <body>
+    <style>
+            * {
+                font-family: Arial;
+            }
+
+            .banner {
+                width: 100%;
+                height: 80vh;
+            }
+
+            .content {
+                padding-top: 15%;
+                text-align: center;
+            }
+
+            button {
+                width: 200px;
+                padding: 15px;
+                text-align: center;
+                margin: 20px 10px;
+                border-radius: 25px;
+                font-family: 'Arial Rounded MT';
+                font-weight: bold;
+                border: 2px solid white;
+                background: transparent;
+                color: orange;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+            }
+
+                button:hover {
+                    transform: scale(1.1);
+                    transition: 0.5s;
+                }
+        </style>
+    <style>
+        body {
+            color: white;
+            z-index: 2;
+            /*background-image: url('../../Content/Library Background.jpg');*/
+            /*background-image: url('../../Content/pexels-pixabay-326333.jpg');*/
+            /*background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;*/
+        }
+        .bg-body {
+            z-index:0;
+        }
+        </style>
+    <div class="bg-body">
+        <img src="~/Content/pexels-pixabay-326333.jpg" />
+    </div>
+    <div class="banner">
+        <div class="content">
+
+            <h1>Welcome to <br />e-Library</h1>
+            <br />
+            <p>
+                Have a look at our wide range of books which you can purchase or pre-order if you're feeling adventurous. <br />Available from the comfort of your home! <br />
+
+                <br />
+                <b>Purchase</b> - Purchases R350 and over gets you free delivery. Order now!
+                <br />
+                <b>Pre-Order</b> - Pre-Order your copy of our "Coming Soon" items, Delivered to your door free of charge once available!
+            </p>
+            <div>
+                <p>
+                        <a class="btn btn-primary" href="/PurchaseBook/Index">Purchase &raquo;</a>
+                        <a class="btn btn-primary" href="/PreOrderBook/Index">Pre-Order &raquo;</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    </body>
+
+    </html>*@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body, html {
+            background-image: url('../../Content/Library Background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            height: 100%;
+            margin: 0;
+            /*font-family: Cambria, sans-serif;*/
+            font-size: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        /* Position text in the middle of the page/image */
+        .bg-text {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            /*border: 3px solid #f1f1f1;
+            border-radius: 5px;*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 45%;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        @*<img src="~/Content/pexels-pixabay-326333.jpg" />*@
+    </div>
+
+    <div class="bg-text">
+        <h1 style="font-family: fantasy; font-size: 50px; color: #E95420; "><b>Welcome to e-Library<br /></b></h1>
+        <br />
+        <p style="font-size:18px;">Have a look at our wide range of books which you can purchase or pre-order if you're feeling adventurous. <br />Available from the comfort of your home! <br /></p>
+        <br />
+        
+        <br />
+        <b>Purchase</b> - Purchases R350 and over gets you free delivery. Order now!
+        <br />
+
+        <br />
+        <b>Pre-Order</b> - Pre-Order your copy of our "Coming Soon" items, Delivered to your door free of charge once available!
+        <br />
+        <br />
+
+        <a style="font-family: Cambria; font-size:20px; width:20%;" class="btn btn-primary" href="/PurchaseBook/Index">Purchase &raquo;</a>
+        <a style="font-family: Cambria; font-size: 20px; width: 20%;" class="btn btn-primary" href="/PreOrderBook/Index">Pre-Order &raquo;</a>
+    </div>
+
+</body>
+</html>

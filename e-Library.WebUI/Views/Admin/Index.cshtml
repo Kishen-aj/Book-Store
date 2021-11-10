@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>e-Library Website</h2>
+<br />
+
+<div class="col-md-3">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Book Manager</h3>
+        </div>
+        <div class="panel-body">
+            <div class="list-group">
+                @Html.ActionLink("Manage Books", "Index", "BookManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Manage Genres", "Index", "BookGenreManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Manage Authors", "Index", "BookAuthorManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Manage Pre-Order Books", "Index", "PreOrderBookManager", null, new { @class = "list-group-item" })
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-3">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Order Manager</h3>
+        </div>
+        <div class="panel-body">
+            <div class="list-group">
+                @Html.ActionLink("Display Current Orders", "DisplayOrdersWithFilter", "OrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Display Pre-Orders", "DisplayOrdersWithFilter", "PreOrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Prepare for Delivery", "PrepareOrderForDelivery", "OrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Prepare for Collection", "PrepareOrderForCollection", "OrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Driver Deliveries", "DriverDeliveries", "OrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Order Collections", "OrderCollections", "OrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Manage Drivers", "Index", "DriverManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Manage Returns", "DisplayReturns", "OrderManager", null, new { @class = "list-group-item" })
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3">
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h3 class="panel-title">Pre-Order Manager</h3>
+        </div>
+        <div class="panel-body">
+            <div class="list-group">
+                @Html.ActionLink("Display Pre-Orders", "DisplayOrdersWithFilter", "PreOrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Prepare for Delivery", "PrepareOrderForDelivery", "PreOrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Driver Deliveries", "DriverDeliveries", "PreOrderManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Manage Drivers", "Index", "DriverManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Manage Returns", "DisplayReturns", "OrderManager", null, new { @class = "list-group-item" })
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-3">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Website Manager</h3>
+        </div>
+        <div class="panel-body">
+            @Html.ActionLink("View Most Popular Book", "ShowMostPopular", "Chart", new { chart = "Popular" }, new { @class = "list-group-item" }) @*NumOrders*@
+            @Html.ActionLink("View Book Most Number of Sales", "ShowNumberSales", "Chart", new { chart = "Popular" }, new { @class = "list-group-item" }) @*NumSales*@
+            @Html.ActionLink("View Book Most Total Sales", "ShowTotalSales", "Chart", new { chart = "Popular" }, new { @class = "list-group-item" }) @*TotalSales*@
+            @Html.ActionLink("View Books with Lowest Stock", "ShowLowStock", "Chart", new { chart = "Popular" }, new { @class = "list-group-item" }) @*Stock*@
+            @Html.ActionLink("View Google Analytics & Data", "ViewAnalytics", "OrderManager", null, new { @class = "list-group-item" })
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    <div class="col-md-12 clearfix"></div>
